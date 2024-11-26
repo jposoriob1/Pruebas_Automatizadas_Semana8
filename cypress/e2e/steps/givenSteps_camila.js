@@ -1,9 +1,10 @@
 import LoginPage from "../pages/loginPage";
 import DashboardPage from "../pages/dashboardPage";
+import SettingsPageCamila from "../pages/settingsPageCamila";
 
-class givenStepsCamila {
+class GivenStepsCamila {
 
-    givenNavigateToLoginPage(){
+    givenNavigateToLoginPage() {
         LoginPage.navigateToLogin();
     }
 
@@ -11,10 +12,13 @@ class givenStepsCamila {
         LoginPage.login();
     }
 
-    givenNavigateToSettingsPage(){
+    givenNavigateToSettingsPage() {
         DashboardPage.clickSettingsLink();
     }
 
+    AndTypeOnXsocialAccount(url) {
+        SettingsPageCamila.typeOnXsocialAccount(url);
+    }
 }
 
-export default new givenStepsCamila();
+export default new GivenStepsCamila();
