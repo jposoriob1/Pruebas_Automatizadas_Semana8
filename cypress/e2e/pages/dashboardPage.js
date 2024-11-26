@@ -6,6 +6,10 @@ class DashboardPage {
     get pagesLink(){
         return cy.get('li>a[href="#/pages/"]');
     }
+
+    get settingsLink(){
+        return cy.get('li>a[href="#/settings/"]');
+    }
     
     clickMembersLink(){
         cy.wait(2000);
