@@ -20,7 +20,7 @@ function validSiteTitle(){
   return nameTagValid = faker.commerce.productAdjective()
 }
 
-describe("Site title valido", () => {
+describe("Site description valido", () => {
     beforeEach(() => {
         // Given the User navigates to the login page
         GivenStepsJuan.givenNavigateToLoginPage();
@@ -31,21 +31,21 @@ describe("Site title valido", () => {
 
       })
 
-    it("01 - Site title valido", () => {
+    it("03 - Site Description valido", () => {
     
         //  When the user clicks on New tag
         WhenStepsJuan.whenClickTitleEdit();
 
 
         // Generate a site title using Faker
-        const siteTitle = validSiteTitle()
+        const siteDescription = validSiteTitle()
         //and fill the site title
-        WhenStepsJuan.whenFillSiteTitle(siteTitle);
+        WhenStepsJuan.whenFillSiteDescription(siteDescription);
 
         // then save the tag
         ThenStepsJuan.thenSaveSite();
         // And assert that the site title was saved
-        ThenStepsJuan.thenAssertSaveSite(siteTitle);
+        ThenStepsJuan.thenAssertSaveSite(siteDescription);
         
         
     

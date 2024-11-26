@@ -4,7 +4,7 @@ import WhenStepsJuan from "./steps/whenSteps_juan"
 import {faker} from "@faker-js/faker";
 
 
-function longDescrption(longDesc = 500){
+function longTitle(longDesc = 500){
   
   let description = '';
   while(description.length < longDesc){
@@ -20,7 +20,20 @@ function validSiteTitle(){
   return nameTagValid = faker.commerce.productAdjective()
 }
 
-describe("Site title valido", () => {
+function invalidSiteTitle(longDesc = 500) {
+  let nameTagValid = '';
+
+  // Genera texto concatenando adjetivos hasta alcanzar la longitud deseada
+  while (nameTagValid.length < longDesc) {
+      nameTagValid += faker.commerce.productAdjective(); // Agrega adjetivos sin espacios
+  }
+
+  // Asegura que el texto tenga exactamente la longitud deseada
+  return nameTagValid.substring(0, longDesc);
+}
+
+
+describe("Site title invalido", () => {
     beforeEach(() => {
         // Given the User navigates to the login page
         GivenStepsJuan.givenNavigateToLoginPage();
@@ -31,22 +44,23 @@ describe("Site title valido", () => {
 
       })
 
-    it("01 - Site title valido", () => {
+    it("02 - Site title invalido", () => {
     
         //  When the user clicks on New tag
         WhenStepsJuan.whenClickTitleEdit();
 
 
         // Generate a site title using Faker
-        const siteTitle = validSiteTitle()
+        const siteTitle = invalidSiteTitle(300)
         //and fill the site title
         WhenStepsJuan.whenFillSiteTitle(siteTitle);
 
         // then save the tag
         ThenStepsJuan.thenSaveSite();
         // And assert that the site title was saved
-        ThenStepsJuan.thenAssertSaveSite(siteTitle);
-        
+        const first10Chars = siteTitle.substring(0, 10);
+        ThenStepsJuan.thenAssertSaveSite(first10Chars);
+
         
     
       
