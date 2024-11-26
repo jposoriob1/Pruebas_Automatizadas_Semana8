@@ -1,5 +1,11 @@
-class DashboardPage {
+class SetingsPage {
+
+
+
+    whenClickTitleEdit(){
+        
+    }
 
 }
 
-export default new DashboardPage();
+export default new SetingsPage();

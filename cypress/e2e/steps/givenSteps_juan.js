@@ -1,7 +1,7 @@
 import LoginPage from "../pages/loginPage";
 import DashboardPage from "../pages/dashboardPage";
 
-class GivenStepsTag {
+class GivenStepsJuan {
 
 
     givenNavigateToLoginPage(){
@@ -12,10 +12,10 @@ class GivenStepsTag {
         LoginPage.login();
     }
 
-    givenNavigateToTagPage(){
-        DashboardPage.clickTagLink();
+    givenNavigateToSettingsPage(){
+        DashboardPage.clickSettingsLink();
     }
 
 }
 
-export default new GivenStepsTag();
+export default new GivenStepsJuan();

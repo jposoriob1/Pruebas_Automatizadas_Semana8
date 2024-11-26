@@ -8,7 +8,7 @@ class DashboardPage {
     }
 
     get settingsLink(){
-        return cy.get('li>a[href="#/settings/"]');
+        return cy.get('a.ember-view.gh-nav-bottom-tabicon');
     }
     
     clickMembersLink(){
@@ -36,6 +36,14 @@ class DashboardPage {
         cy.wait(2000);
         this.postsLink.click();
     }
+
+    clickSettingsLink(){
+        cy.wait(2000);
+        this.settingsLink.click();
+    }
+
 }
+
+
 
 export default new DashboardPage();
