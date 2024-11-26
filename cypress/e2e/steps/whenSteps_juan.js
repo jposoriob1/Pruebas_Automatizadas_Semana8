@@ -12,8 +12,8 @@ class WhenStepsJuan {
         SettingsPageJuan.fillSiteTitle(siteTitle);
     }
 
-    whenFillSiteDescription(siteTitle){
-        SettingsPageJuan.fillSiteDescription(siteTitle);
+    whenFillSiteDescription(siteDescription){
+        SettingsPageJuan.fillSiteDescription(siteDescription);
     }
 
 
