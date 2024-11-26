@@ -17,7 +17,6 @@ module.exports = {
       config.password = params[version].password;
 
       return config;
-    },
-    excludeSpecPattern: '**/LoginSetup.cy.js'
+    }
   },
 };
