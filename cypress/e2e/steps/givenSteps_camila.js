@@ -32,8 +32,17 @@ class GivenStepsCamila {
         SettingsPageCamila.navigationViewSite();
     }
 
+    AndEditNavigation(){
+        SettingsPageCamila.editNavigation();
+    }
 
+    AndClickSecondaryNavigation(){
+        SettingsPageCamila.clickSecondaryNavigation();
+    }
 
+    AndEditAnnouncement(){
+        SettingsPageCamila.editAnnouncement();
+    }
 
 }
 

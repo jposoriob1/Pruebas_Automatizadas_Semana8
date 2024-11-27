@@ -26,9 +26,6 @@ class SettingsPageCamila {
         return cy.get('[data-testid="locksite"] > .items-start > :nth-child(2) > .flex > .cursor-pointer > span');
     }
 
-    get habilitarSitePrivado(){
-        return cy.get('button[data-state="unchecked"][aria-checked="false"]');
-    }
 
     get passwordSite(){
         return cy.get('input[placeholder="Enter password"]');
@@ -38,13 +35,6 @@ class SettingsPageCamila {
         return cy.get('a[href="#/site/"]');
     }
 
-    get viewSitePassword(){
-        return  cy.get('input[placeholder="Password"]');
-    }
-
-    get accesSite(){
-        return cy.get('button.gh-btn').contains('Access site');
-    }
 
     get shouldSitePrivate(){
         return cy.get('.leading-supertight');
@@ -53,6 +43,56 @@ class SettingsPageCamila {
     get closeSettings(){
         return cy.get('[data-testid="exit-settings"]');
     }
+
+    get navigationSiteSettings(){
+        return cy.get('[data-testid="navigation"]',{ timeout: 10000 }).should('exist').scrollIntoView();
+    }
+
+    get customizeNavigation(){
+        return cy.get('[data-testid="navigation"] > .flex > :nth-child(2) > .cursor-pointer > span');
+    }
+
+    get addNavigation(){
+        return cy.get('[data-testid="add-button"]');
+    }
+
+    get inputItemNavigation(){
+        return cy.get('input[placeholder="New item label"]');
+    }
+    get inputUrlNavigation(){
+        return cy.get('input[value="http://localhost:3001/"]');
+    }
+    get divNavigation(){
+        return cy.get('[data-testid="new-navigation-item"]');
+    }
+    get secondaryNavigation(){
+        return cy.get('#secondary-nav');
+    }
+
+    get btnSaveNavigation(){
+        return cy.get('.bg-black')
+    }
+    get announcement(){
+        return cy.get('[data-testid="announcement-bar"]',{ timeout: 10000 }).should('exist').scrollIntoView();
+    }
+
+    get btnCustomizeAnnouncement(){
+        return cy.get('[data-testid="announcement-bar"] > .flex > :nth-child(2) > .cursor-pointer > span');
+    }
+
+    get addAnnouncement(){
+        return cy.get('.kg-prose > p');
+    }
+
+    get btnSaved(){
+        return cy.get('.bg-green > span');
+    }
+
+    get closeAnnouncement(){
+        return cy.get('.max-h-\\[82px\\] > .flex > .text-grey-900 > span');
+
+    }
+
     typeOnXsocialAccount(url){
         this.socialAccount.click();
         this.socialAccountEdit.click();
@@ -127,14 +167,57 @@ class SettingsPageCamila {
 
     clickAccessSite(){
         cy.wait(2000);
-        cy.get('iframe.site-frame') // Selecciona el iframe por su clase (ajusta si es necesario)
-            .its('0.contentDocument.body') // Cambia al contenido del iframe
-            .should('not.be.empty') // Asegúrate de que el iframe esté cargado
-            .then(cy.wrap) // Cambia al contexto del iframe
-            .contains('button', 'Access site →') // Encuentra el botón basado en el texto
-            .should('be.visible') // Verifica que sea visible
-            .dblclick(); // Haz clic en el botón
+        cy.get('iframe.site-frame')
+            .its('0.contentDocument.body')
+            .should('not.be.empty')
+            .then(cy.wrap)
+            .contains('button', 'Access site →')
+            .should('be.visible')
+            .dblclick();
 
+    }
+
+    editNavigation(){
+        this.navigationSiteSettings.click();
+        this.customizeNavigation.click();
+    }
+
+    inputNavigationItem(url,item){
+        this.divNavigation.within(() => {
+            this.inputUrlNavigation.click().clear().type(url,{ parseSpecialCharSequences: false }).click();
+            cy.wait(1000);
+            this.inputItemNavigation.type(item,{ parseSpecialCharSequences: false });
+            this.addNavigation.click();
+            cy.wait(1000);
+        });
+    }
+    saveNavigation(){
+        cy.wait(1000);
+        this.btnSaveNavigation.should('be.visible').click();
+    }
+
+    clickSecondaryNavigation(){
+        this.secondaryNavigation.click();
+        cy.wait(1000);
+    }
+
+    editAnnouncement(){
+        this.announcement.click();
+        cy.wait(1000);
+        this.btnCustomizeAnnouncement.click();
+    }
+
+    inputAnnouncement(announcement){
+        this.addAnnouncement.click().clear().type(announcement,{ parseSpecialCharSequences: false });
+    }
+
+    saveAnnouncement(){
+        cy.wait(1000);
+        this.btnSaveNavigation.click();
+        cy.wait(500);
+        this.btnSaved.should('be.visible').and('contain.text', 'Saved');
+        cy.wait(1000);
+        this.closeAnnouncement.click();
     }
 
 }

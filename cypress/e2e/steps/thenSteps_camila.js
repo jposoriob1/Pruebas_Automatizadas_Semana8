@@ -16,5 +16,12 @@ class ThenStepsCamila {
     ThenClickAccessSite(){
         SettingsPageCamila.clickAccessSite();
     }
+
+    ThenSaveNavigation(){
+        SettingsPageCamila.saveNavigation();
+    }
+    ThenSaveAnnouncement(){
+        SettingsPageCamila.saveAnnouncement();
+    }
 }
 export default new ThenStepsCamila;

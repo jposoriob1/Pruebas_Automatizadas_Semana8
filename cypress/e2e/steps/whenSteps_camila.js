@@ -10,5 +10,13 @@ class WhenStepsCamila{
     WhenInputPasswordSitePreview(password){
         SettingsPageCamila.inputPasswordViewSite(password);
     }
+    WhenInputNewNavigation(url,item){
+        SettingsPageCamila.inputNavigationItem(url,item);
+    }
+
+    WhenInputAnnouncement(announcement){
+        SettingsPageCamila.inputAnnouncement(announcement);
+    }
+
 }
 export default new WhenStepsCamila();
