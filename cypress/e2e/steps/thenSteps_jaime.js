@@ -12,5 +12,9 @@ class ThenSteps_jaime {
     ThenInvalidEmailAddressExists(){
         SettingsPage_jaime.checkIfInvalidEmailAddressExists();
     }
+
+    ThenErrorExists(){
+        SettingsPage_jaime.checkIfErrorExists();
+    }
 }
 export default new ThenSteps_jaime;

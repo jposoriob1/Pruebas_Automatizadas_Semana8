@@ -23,6 +23,27 @@ class SettingsPage_jaime {
         return cy.get('.peer.z-[1].order-2.h-9.w-full.bg-transparent.px-3.py-1.5.text-sm.placeholder\\:text-grey-500.dark\\:placeholder\\:text-grey-700.md\\:h-[38px].md\\:py-2.md\\:text-md.dark\\:text-white.rounded-lg');
     }
 
+    get EditTierCard() {
+        return cy.get('div[data-testid="tier-card"][data-tier="free"]')
+            .scrollIntoView();
+    }
+
+    get EditTierCard_NameField() {
+        return cy.get('.peer.z-\\[1\\].order-2.h-9.w-full.bg-transparent.px-3.py-1\\.5.text-sm.placeholder\\:text-grey-500.dark\\:placeholder\\:text-grey-700.md\\:h-\\[38px\\].md\\:py-2.md\\:text-md.dark\\:text-white.rounded-lg');
+    }
+
+    typeOnEditTierCard_NameField(tierName){
+        this.EditTierCard_NameField.eq(0).clear().type(tierName);
+    }
+
+    typeOnEditTierCard_Description(tierDescription){
+        this.EditTierCard_NameField.eq(1).clear().type(tierDescription);
+    }
+
+    clickOnEditTierCard() {
+        this.EditTierCard.click();
+    }
+
     typeOnSupportEmailAddressField(supportEmailAddress){
         cy.wait(1000);
         this.SupportEmailAddressField.clear().type(supportEmailAddress);
@@ -67,6 +88,15 @@ class SettingsPage_jaime {
 
     checkIfInvalidEmailAddressExists() {
         cy.contains('span', 'Enter a valid email address').should('exist');
+    }
+
+    navigateToEditTierModal() {
+        this.clickOnEditTierCard();
+    }
+
+    checkIfErrorExists() {
+        cy.get('div.text-grey-900.dark\\:text-grey-300')
+            .should('exist');
     }
 }
 

@@ -2,7 +2,7 @@ import LoginPage from "../pages/loginPage";
 import DashboardPage from "../pages/dashboardPage";
 import settingsPage_jaime from "../pages/settingsPage_jaime";
 
-class GivenSteps_jaime {
+class givenSteps_jaime {
     givenNavigateToLoginPage() {
         LoginPage.navigateToLogin();
     }
@@ -18,6 +18,10 @@ class GivenSteps_jaime {
     givenNavigateToPortalModal() {
         settingsPage_jaime.navigateToPortalModal()
     }
+
+    givenNavigateToEditTierModal() {
+        settingsPage_jaime.navigateToEditTierModal();
+    }
 }
 
-export default new GivenSteps_jaime();
+export default new givenSteps_jaime();

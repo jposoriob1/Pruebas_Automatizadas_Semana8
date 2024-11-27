@@ -24,5 +24,13 @@ class whenSteps_jaime{
     WhenTypeOnSupportEmailAddressField(supportEmailAddress){
         SettingsPage_jaime.typeOnSupportEmailAddressField(supportEmailAddress);
     }
+
+    WhenTypeOnEditTierCard_NameField(tierName){
+        SettingsPage_jaime.typeOnEditTierCard_NameField(tierName);
+    }
+
+    WhenTypeOnEditTierCard_Description(tierDescription){
+        SettingsPage_jaime.typeOnEditTierCard_Description(tierDescription);
+    }
 }
 export default new whenSteps_jaime();

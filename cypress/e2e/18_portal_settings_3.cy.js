@@ -1,4 +1,4 @@
-import GivenSteps_jaime from "./steps/givenSteps_jaime";
+import givenSteps_jaime from "./steps/givenSteps_jaime";
 import whenSteps_jaime from "./steps/whenSteps_jaime";
 import { faker } from "@faker-js/faker";
 import thenSteps_jaime from "./steps/thenSteps_jaime";
@@ -11,10 +11,10 @@ const email = faker.internet.email();
 
 describe("Portal Settings 3 Tests", () => {
     beforeEach(() => {
-        GivenSteps_jaime.givenNavigateToLoginPage();
-        GivenSteps_jaime.givenLogin();
-        GivenSteps_jaime.givenNavigateToSettingsPage();
-        GivenSteps_jaime.givenNavigateToPortalModal();
+        givenSteps_jaime.givenNavigateToLoginPage();
+        givenSteps_jaime.givenLogin();
+        givenSteps_jaime.givenNavigateToSettingsPage();
+        givenSteps_jaime.givenNavigateToPortalModal();
     });
 
     it("Should test portal settings 3 - sentence of less than 115 characters (negative)", () => {
