@@ -11,8 +11,26 @@ class SettingsPage_jaime {
         return cy.get('button#lookAndFeel');
     }
 
+    get AccountPageTab() {
+        return cy.get('button#accountPage');
+    }
+
     get SignUpButtonText() {
         return cy.get('.peer.z-\\[1\\].order-2.h-9.w-full.bg-transparent.px-3.py-1\\.5.text-sm.placeholder\\:text-grey-500.dark\\:placeholder\\:text-grey-700.md\\:h-\\[38px\\].md\\:py-2.md\\:text-md.dark\\:text-white.rounded-lg');
+    }
+
+    get SupportEmailAddressField() {
+        return cy.get('.peer.z-[1].order-2.h-9.w-full.bg-transparent.px-3.py-1.5.text-sm.placeholder\\:text-grey-500.dark\\:placeholder\\:text-grey-700.md\\:h-[38px].md\\:py-2.md\\:text-md.dark\\:text-white.rounded-lg');
+    }
+
+    typeOnSupportEmailAddressField(supportEmailAddress){
+        cy.wait(1000);
+        this.SupportEmailAddressField.clear().type(supportEmailAddress);
+    }
+
+    clickAccountPageTab() {
+        cy.wait(1000);
+        this.AccountPageTab.click();
     }
 
     typeOnSignUpButtonText(signUpText){
@@ -45,6 +63,10 @@ class SettingsPage_jaime {
 
     checkIfNoticeLongErrorExists() {
         cy.contains('span', 'Signup notice is too long').should('exist');
+    }
+
+    checkIfInvalidEmailAddressExists() {
+        cy.contains('span', 'Enter a valid email address').should('exist');
     }
 }
 

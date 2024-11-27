@@ -8,5 +8,9 @@ class ThenSteps_jaime {
     ThenNoticeLongErrorExists(){
         SettingsPage_jaime.checkIfNoticeLongErrorExists();
     }
+
+    ThenInvalidEmailAddressExists(){
+        SettingsPage_jaime.checkIfInvalidEmailAddressExists();
+    }
 }
 export default new ThenSteps_jaime;

@@ -16,5 +16,13 @@ class whenSteps_jaime{
     WhenTypeOnSignUpButtonText(signUpText){
         SettingsPage_jaime.typeOnSignUpButtonText(signUpText);
     }
+
+    WhenClickAccountPageTab(){
+        SettingsPage_jaime.clickAccountPageTab();
+    }
+
+    WhenTypeOnSupportEmailAddressField(supportEmailAddress){
+        SettingsPage_jaime.typeOnSupportEmailAddressField(supportEmailAddress);
+    }
 }
 export default new whenSteps_jaime();
