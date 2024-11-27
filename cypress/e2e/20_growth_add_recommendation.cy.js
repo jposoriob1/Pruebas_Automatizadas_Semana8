@@ -29,4 +29,10 @@ describe("Growth Add Tests", () => {
         whenSteps_jaime.WhenClickOnAddGrowthRecommendationNextButton();
         thenSteps_jaime.ThenCheckIfErrorOnUrlExists();
     });
+
+    it("Should test URL on Growth Recommendation - Empty Space", () => {
+        whenSteps_jaime.WhenTypeOnGeneralTextField(' ');
+        whenSteps_jaime.WhenClickOnAddGrowthRecommendationNextButton();
+        thenSteps_jaime.ThenCheckIfErrorOnUrlExists();
+    });
 });
