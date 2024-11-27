@@ -4,7 +4,7 @@ import ThenStepsCamila from "./steps/thenSteps_camila";
 
 const urlValid="https://x.com/camila123457"
 
-describe("62_post_excerpt_301_caracteres", () => {
+describe("21_url_valida_Xsocial_account", () => {
     beforeEach(() => {
         GivenStepsCamila.givenNavigateToLoginPage();
         // and enters a valid username and password and click the login button

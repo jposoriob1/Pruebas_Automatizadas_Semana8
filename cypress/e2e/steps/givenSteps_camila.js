@@ -19,6 +19,22 @@ class GivenStepsCamila {
     AndTypeOnXsocialAccount(url) {
         SettingsPageCamila.typeOnXsocialAccount(url);
     }
+
+    AndEditMakeSitePrivate(){
+        SettingsPageCamila.editMakeSitePrivate();
+    }
+
+    AndInputPasswordSite(password){
+        SettingsPageCamila.inputPasswordSite(password);
+    }
+
+    AndNavigateViewSite(){
+        SettingsPageCamila.navigationViewSite();
+    }
+
+
+
+
 }
 
 export default new GivenStepsCamila();

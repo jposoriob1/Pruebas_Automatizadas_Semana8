@@ -8,5 +8,13 @@ class ThenStepsCamila {
     ThenUrlXsocialAccountValid(){
         SettingsPageCamila.urlValid();
     }
+
+    ThenSitePrivate(){
+        SettingsPageCamila.verifySitePrivate();
+    }
+
+    ThenClickAccessSite(){
+        SettingsPageCamila.clickAccessSite();
+    }
 }
 export default new ThenStepsCamila;
