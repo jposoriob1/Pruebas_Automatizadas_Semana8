@@ -32,6 +32,30 @@ class SettingsPage_jaime {
         return cy.get('.peer.z-\\[1\\].order-2.h-9.w-full.bg-transparent.px-3.py-1\\.5.text-sm.placeholder\\:text-grey-500.dark\\:placeholder\\:text-grey-700.md\\:h-\\[38px\\].md\\:py-2.md\\:text-md.dark\\:text-white.rounded-lg');
     }
 
+    get generalTextField() {
+        return cy.get('.peer.z-\\[1\\].order-2.h-9.w-full.bg-transparent.px-3.py-1\\.5.text-sm.placeholder\\:text-grey-500.dark\\:placeholder\\:text-grey-700.md\\:h-\\[38px\\].md\\:py-2.md\\:text-md.dark\\:text-white.rounded-lg');
+    }
+
+    get AddGrowthRecommendationNextButton() {
+        return cy.get('button').contains('Next');
+    }
+
+    checkIfPreviewTitleExists() {
+        return cy.get('h6').contains('Preview').should('exist');
+    }
+
+    checkIfErrorOnURLExists() {
+        return cy.get('span').contains('Enter a valid URL').should('exist');
+    }
+
+    clickOnAddGrowthRecommendationNextButton() {
+        this.AddGrowthRecommendationNextButton.click();
+    }
+
+    typeOnGeneralTextField(generalText){
+        this.generalTextField.clear().type(generalText);
+    }
+
     typeOnEditTierCard_NameField(tierName){
         this.EditTierCard_NameField.eq(0).clear().type(tierName);
     }
@@ -97,6 +121,12 @@ class SettingsPage_jaime {
     checkIfErrorExists() {
         cy.get('div.text-grey-900.dark\\:text-grey-300')
             .should('exist');
+    }
+
+    navigateToGrowthAddRecommendationModal() {
+        cy.get('span').contains('Add first recommendation')
+            .scrollIntoView()
+            .click();
     }
 }
 

@@ -32,5 +32,13 @@ class whenSteps_jaime{
     WhenTypeOnEditTierCard_Description(tierDescription){
         SettingsPage_jaime.typeOnEditTierCard_Description(tierDescription);
     }
+
+    WhenTypeOnGeneralTextField(generalText){
+        SettingsPage_jaime.typeOnGeneralTextField(generalText);
+    }
+
+    WhenClickOnAddGrowthRecommendationNextButton(){
+        SettingsPage_jaime.clickOnAddGrowthRecommendationNextButton();
+    }
 }
 export default new whenSteps_jaime();

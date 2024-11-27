@@ -16,5 +16,13 @@ class ThenSteps_jaime {
     ThenErrorExists(){
         SettingsPage_jaime.checkIfErrorExists();
     }
+
+    ThenPreviewTitleExists() {
+        SettingsPage_jaime.checkIfPreviewTitleExists();
+    }
+
+    ThenCheckIfErrorOnUrlExists() {
+        SettingsPage_jaime.checkIfErrorOnURLExists();
+    }
 }
 export default new ThenSteps_jaime;

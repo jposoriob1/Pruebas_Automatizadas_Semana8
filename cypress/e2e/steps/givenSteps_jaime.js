@@ -22,6 +22,10 @@ class givenSteps_jaime {
     givenNavigateToEditTierModal() {
         settingsPage_jaime.navigateToEditTierModal();
     }
+
+    givenNavigateToGrowthAddRecommendationModal() {
+        settingsPage_jaime.navigateToGrowthAddRecommendationModal();
+    }
 }
 
 export default new givenSteps_jaime();
