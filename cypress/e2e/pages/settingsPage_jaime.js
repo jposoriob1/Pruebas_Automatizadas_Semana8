@@ -24,6 +24,10 @@ class SettingsPage_jaime {
     checkChangesWereSaved() {
         cy.contains('button', 'Saved').should('exist');
     }
+
+    checkIfNoticeLongErrorExists() {
+        cy.contains('span', 'Signup notice is too long').should('exist');
+    }
 }
 
 export default new SettingsPage_jaime();
