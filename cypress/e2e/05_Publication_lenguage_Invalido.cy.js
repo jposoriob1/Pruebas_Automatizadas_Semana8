@@ -20,45 +20,44 @@ function validSiteTitle(){
   return nameTagValid = faker.commerce.productAdjective()
 }
 
-function invalidSiteTitle(longDesc = 500) {
+function invalidLenguage(longDesc = 500) {
   let nameTagValid = '';
 
-
+ 
   while (nameTagValid.length < longDesc) {
-      nameTagValid += faker.commerce.productAdjective(); 
+      nameTagValid += faker.commerce.productAdjective();
   }
+
 
   return nameTagValid.substring(0, longDesc);
 }
 
 
-describe("Site description invalido", () => {
+describe("Publication language invalido", () => {
     beforeEach(() => {
         // Given the User navigates to the login page
         GivenStepsJuan.givenNavigateToLoginPage();
         // and enters a valid username and password and click the login button
         GivenStepsJuan.givenLogin();
-        // and navigates to the Setings
+        // and navigates to the Tags
         GivenStepsJuan.givenNavigateToSettingsPage();
 
       })
 
-    it("04 - Site description invalido", () => {
+    it("05 - Publication language invalido", () => {
     
-        //  When the user clicks on title & description
-        WhenStepsJuan.whenClickTitleEdit();
+        //  When the user clicks on Edit publication lenguage
+        WhenStepsJuan.whenEditPlenguage();
 
-
-        // Generate a site title using Faker
-        const siteDescription = invalidSiteTitle(300)
-        //and fill the site title
-        WhenStepsJuan.whenFillSiteDescription(siteDescription);
+        // Generate a site faker words for fill language
+        const invalidLeng = invalidLenguage(10)
+        //and fill the site lenguage
+        WhenStepsJuan.whenFillSiteLenguage(invalidLeng);
 
         // then save
-        ThenStepsJuan.thenSaveSite();
-        // And assert that the site title was saved
-        const first10Chars = siteDescription.substring(0, 10);
-        ThenStepsJuan.thenAssertSaveSite(first10Chars);
+        ThenStepsJuan.thenSavePlanguage();
+        // And assert that the publication lenguage was saved
+        ThenStepsJuan.thenAssertPlanguage(invalidLeng);
 
         
     });

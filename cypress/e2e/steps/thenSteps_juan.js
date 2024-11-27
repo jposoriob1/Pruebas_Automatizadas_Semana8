@@ -12,6 +12,33 @@ class ThenStepsJuan {
         SettingsPageJuan.assertSaveSite(siteTitle);
     }
 
+    thenSavePlanguage(){
+        SettingsPageJuan.saveSite();
+    }
+
+    thenAssertPlanguage(siteTitle){
+        SettingsPageJuan.assertSaveSite(siteTitle);
+    }
+
+    thenClickSaveMetadata(){
+        SettingsPageJuan.clickSaveMetadata();
+    }
+
+    thenAssertMetaTitle(validTitle){
+        SettingsPageJuan.assertMetaTitle(validTitle);
+    }
+
+    thenClickCloseModal(){
+        SettingsPageJuan.clickCloseModal();
+    }
+
+    thenAssertNLtitle(invalidName){
+        SettingsPageJuan.assertNLtitle(invalidName);
+    }
+    thenAssertNLDescrip(invalidDescription){
+        SettingsPageJuan.assertNLDescrip(invalidDescription);
+    }
+
 
 }
 
