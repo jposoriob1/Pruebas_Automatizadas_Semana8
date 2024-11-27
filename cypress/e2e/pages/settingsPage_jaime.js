@@ -7,6 +7,24 @@ class SettingsPage_jaime {
         return cy.get('button').contains('Save');
     }
 
+    get LookAndFeelTab() {
+        return cy.get('button#lookAndFeel');
+    }
+
+    get SignUpButtonText() {
+        return cy.get('.peer.z-\\[1\\].order-2.h-9.w-full.bg-transparent.px-3.py-1\\.5.text-sm.placeholder\\:text-grey-500.dark\\:placeholder\\:text-grey-700.md\\:h-\\[38px\\].md\\:py-2.md\\:text-md.dark\\:text-white.rounded-lg');
+    }
+
+    typeOnSignUpButtonText(signUpText){
+        cy.wait(1000);
+        this.SignUpButtonText.clear().type(signUpText);
+    }
+
+    clickLookAndFeelTab() {
+        cy.wait(1000);
+        this.LookAndFeelTab.click();
+    }
+
     clickSaveButton() {
         this.SaveButton.click();
     }

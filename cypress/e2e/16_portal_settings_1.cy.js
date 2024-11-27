@@ -8,7 +8,7 @@ const sentenceMoreThan115 = faker.lorem.sentence(50);
 const wordMoreThan115 = faker.string.alpha({length: 120});
 const wordOf110 = faker.string.alpha({length: 110});
 
-describe("Portal Settings Tests", () => {
+describe("Portal Settings Tests 1", () => {
     beforeEach(() => {
         GivenSteps_jaime.givenNavigateToLoginPage();
         GivenSteps_jaime.givenLogin();
