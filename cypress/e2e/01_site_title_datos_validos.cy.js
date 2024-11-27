@@ -26,14 +26,14 @@ describe("Site title valido", () => {
         GivenStepsJuan.givenNavigateToLoginPage();
         // and enters a valid username and password and click the login button
         GivenStepsJuan.givenLogin();
-        // and navigates to the Tags
+        // and navigates to the Settings
         GivenStepsJuan.givenNavigateToSettingsPage();
 
       })
 
     it("01 - Site title valido", () => {
     
-        //  When the user clicks on New tag
+        //  When the user clicks on edit title & description 
         WhenStepsJuan.whenClickTitleEdit();
 
 
@@ -46,34 +46,6 @@ describe("Site title valido", () => {
         ThenStepsJuan.thenSaveSite();
         // And assert that the site title was saved
         ThenStepsJuan.thenAssertSaveSite(siteTitle);
-        
-        
-    
-      
-
-      
-      
-      
-    //     //  When the user clicks on New tag
-    //   WhenStepsTag.whenClickTagNewTag();
-      
-    //   // Generate a tag name using Faker
-    //   const nameTag = validTagName()
-    //   // and fills the name tag input
-    //   WhenStepsTag.whenFillNameTag(nameTag);
-    
-      
-    //   // Generate a long description > 501 using Faker
-    //   const descriptionTag = longDescrption(501)
-    //   // and fill the description tag input
-    //   WhenStepsTag.whenFillInvalidDescription(descriptionTag);
-  
-    //   // then save the tag
-    //   ThenStepsTag.thenSaveTag();
-
-    //   // And assert that the error message is displayed
-    //   ThenStepsTag.thenAssertErrorDescription();  
-
         
     });
     

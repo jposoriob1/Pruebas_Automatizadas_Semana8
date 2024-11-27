@@ -12,6 +12,14 @@ class ThenStepsJuan {
         SettingsPageJuan.assertSaveSite(siteTitle);
     }
 
+    thenSavePlanguage(){
+        SettingsPageJuan.saveSite();
+    }
+
+    thenAssertPlanguage(siteTitle){
+        SettingsPageJuan.assertSaveSite(siteTitle);
+    }
+
 
 }
 

@@ -16,6 +16,14 @@ class WhenStepsJuan {
         SettingsPageJuan.fillSiteDescription(siteDescription);
     }
 
+    whenEditPlenguage(){
+        SettingsPageJuan.editPlenguage();
+    }
+
+    whenFillSiteLenguage(siteTitle){
+        SettingsPageJuan.fillSiteLenguage(siteTitle);
+    }
+
 
 
 }

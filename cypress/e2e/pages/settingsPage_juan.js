@@ -20,6 +20,14 @@ class SettingsPageJuan {
         return cy.get('input[placeholder="Site description"]');
     }
 
+    get buttomEditPlenguage(){
+        return cy.get('[data-testid="publication-language"] > .items-start > :nth-child(2) > .flex > .cursor-pointer > span');
+    }
+
+    get siteLenguage(){
+        return cy.get('input[placeholder="Site language"]');
+    }
+
     clickTitleEdit(){
         this.titleEdit.click();
     }
@@ -40,6 +48,13 @@ class SettingsPageJuan {
         this.siteDecription.clear().type(siteDescription);
     }
 
+    editPlenguage(){
+        this.buttomEditPlenguage.click();
+    }
+
+    fillSiteLenguage(siteTitle){
+        this.siteLenguage.clear().type(siteTitle);
+    }
 }
 
 export default new SettingsPageJuan();

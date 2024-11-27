@@ -46,7 +46,7 @@ describe("Site title invalido", () => {
 
     it("02 - Site title invalido", () => {
     
-        //  When the user clicks on New tag
+        //  When the user clicks on title & description
         WhenStepsJuan.whenClickTitleEdit();
 
 
@@ -55,38 +55,12 @@ describe("Site title invalido", () => {
         //and fill the site title
         WhenStepsJuan.whenFillSiteTitle(siteTitle);
 
-        // then save the tag
+        // then save
         ThenStepsJuan.thenSaveSite();
         // And assert that the site title was saved
         const first10Chars = siteTitle.substring(0, 10);
         ThenStepsJuan.thenAssertSaveSite(first10Chars);
 
-        
-    
-      
-
-      
-      
-      
-    //     //  When the user clicks on New tag
-    //   WhenStepsTag.whenClickTagNewTag();
-      
-    //   // Generate a tag name using Faker
-    //   const nameTag = validTagName()
-    //   // and fills the name tag input
-    //   WhenStepsTag.whenFillNameTag(nameTag);
-    
-      
-    //   // Generate a long description > 501 using Faker
-    //   const descriptionTag = longDescrption(501)
-    //   // and fill the description tag input
-    //   WhenStepsTag.whenFillInvalidDescription(descriptionTag);
-  
-    //   // then save the tag
-    //   ThenStepsTag.thenSaveTag();
-
-    //   // And assert that the error message is displayed
-    //   ThenStepsTag.thenAssertErrorDescription();  
 
         
     });
