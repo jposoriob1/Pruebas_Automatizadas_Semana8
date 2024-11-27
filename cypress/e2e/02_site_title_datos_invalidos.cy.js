@@ -23,12 +23,12 @@ function validSiteTitle(){
 function invalidSiteTitle(longDesc = 500) {
   let nameTagValid = '';
 
-  // Genera texto concatenando adjetivos hasta alcanzar la longitud deseada
+
   while (nameTagValid.length < longDesc) {
-      nameTagValid += faker.commerce.productAdjective(); // Agrega adjetivos sin espacios
+      nameTagValid += faker.commerce.productAdjective(); 
   }
 
-  // Asegura que el texto tenga exactamente la longitud deseada
+  
   return nameTagValid.substring(0, longDesc);
 }
 

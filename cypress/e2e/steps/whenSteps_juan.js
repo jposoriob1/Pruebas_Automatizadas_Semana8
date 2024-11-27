@@ -24,8 +24,37 @@ class WhenStepsJuan {
         SettingsPageJuan.fillSiteLenguage(siteTitle);
     }
 
+    whenClickEditMeta(){
+        SettingsPageJuan.clickEditMeta();
+    }
 
+    whenFillMetaTitle(invalidLeng){
+        SettingsPageJuan.fillMetaTitle(invalidLeng);
+    }
 
+    whenFillMetaDescription(validTitle){
+        SettingsPageJuan.fillMetaDescription(validTitle);
+    }
+
+    whenClickAddNewsLetter(){
+        SettingsPageJuan.clickAddNewsLetter();
+    }
+
+    whenFillNLname(invalidName){
+        SettingsPageJuan.fillNLname(invalidName);
+    }
+
+    whenFillNLDescrip(invalidDescription){
+        SettingsPageJuan.fillNLDescrip(invalidDescription);
+    }
+
+    whenClickCreateNL(){
+        SettingsPageJuan.clickCreateNL();
+    }
+
+    whenClickSaveNL(){
+        SettingsPageJuan.clickSaveNL();
+    }
 }
 
 export default new WhenStepsJuan();
