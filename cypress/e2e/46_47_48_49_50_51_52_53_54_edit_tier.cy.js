@@ -16,55 +16,55 @@ describe("Edit tier Tests", () => {
         givenSteps_jaime.givenNavigateToEditTierModal();
     });
 
-    it("Should test Edit tier [Name Field] - sentence of less than 115 characters (positive)", () => {
+    it("46.) Should test Edit tier [Name Field] - sentence of less than 115 characters (positive)", () => {
         whenSteps_jaime.WhenTypeOnEditTierCard_NameField(sentenceLessThan115);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenSavedButtonExists();
     });
 
-    it("Should test Edit tier [Name Field] - sentence of more than 115 characters (positive)", () => {
+    it("47.) Should test Edit tier [Name Field] - sentence of more than 115 characters (positive)", () => {
         whenSteps_jaime.WhenTypeOnEditTierCard_NameField(sentenceMoreThan115);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenSavedButtonExists();
     });
 
-    it("Should test Edit tier [Name Field] - word of more than 115 characters (positive)", () => {
+    it("48.) Should test Edit tier [Name Field] - word of more than 115 characters (positive)", () => {
         whenSteps_jaime.WhenTypeOnEditTierCard_NameField(wordMoreThan115);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenSavedButtonExists();
     });
 
-    it("Should test Edit tier [Name Field] - word of 110 characters (positive)", () => {
+    it("49.) Should test Edit tier [Name Field] - word of 110 characters (positive)", () => {
         whenSteps_jaime.WhenTypeOnEditTierCard_NameField(wordOf110);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenSavedButtonExists();
     });
 
-    it("Should test Edit tier [Description Field] - sentence of less than 115 characters (positive)", () => {
+    it("50.) Should test Edit tier [Description Field] - sentence of less than 115 characters (positive)", () => {
         whenSteps_jaime.WhenTypeOnEditTierCard_Description(sentenceLessThan115);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenSavedButtonExists();
     });
 
-    it("Should test Edit tier [Description Field] - sentence of more than 115 characters (negative)", () => {
+    it("51.) Should test Edit tier [Description Field] - sentence of more than 115 characters (negative)", () => {
         whenSteps_jaime.WhenTypeOnEditTierCard_Description(sentenceMoreThan115);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenSavedButtonExists();
     });
 
-    it("Should test Edit tier [Description Field] - word of more than 115 characters (negative)", () => {
+    it("52.) Should test Edit tier [Description Field] - word of more than 115 characters (negative)", () => {
         whenSteps_jaime.WhenTypeOnEditTierCard_Description(wordMoreThan115);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenSavedButtonExists();
     });
 
-    it("Should test Edit tier [Description Field] - word of 110 characters (negative)", () => {
+    it("53.) Should test Edit tier [Description Field] - word of 110 characters (negative)", () => {
         whenSteps_jaime.WhenTypeOnEditTierCard_Description(wordOf110);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenSavedButtonExists();
     });
 
-    it("Should test Edit tier [Description Field] - Empty (negative)", () => {
+    it("54.) Should test Edit tier [Description Field] - Empty (negative)", () => {
         whenSteps_jaime.WhenTypeOnEditTierCard_Description(' ');
         whenSteps_jaime.WhenClickSaveButton();
     });

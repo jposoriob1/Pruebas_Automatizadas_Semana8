@@ -16,25 +16,25 @@ describe("Portal Settings Tests 1", () => {
         givenSteps_jaime.givenNavigateToPortalModal();
     });
 
-    it("Should test portal settings 1 - sentence of less than 115 characters (positive)", () => {
+    it("31.) Should test portal settings 1 - sentence of less than 115 characters (positive)", () => {
         whenSteps_jaime.WhenTypeOnDisplayNoticeField(sentenceLessThan115);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenSavedButtonExists();
     });
 
-    it("Should test portal settings 1 - sentence of more than 115 characters (negative)", () => {
+    it("32.) Should test portal settings 1 - sentence of more than 115 characters (negative)", () => {
         whenSteps_jaime.WhenTypeOnDisplayNoticeField(sentenceMoreThan115);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenNoticeLongErrorExists();
     });
 
-    it("Should test portal settings 1 - word of more than 115 characters (negative)", () => {
+    it("33.) Should test portal settings 1 - word of more than 115 characters (negative)", () => {
         whenSteps_jaime.WhenTypeOnDisplayNoticeField(wordMoreThan115);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenNoticeLongErrorExists();
     });
 
-    it("Should test portal settings 1 - more than 110 characters (positive)", () => {
+    it("34.) Should test portal settings 1 - more than 110 characters (positive)", () => {
         whenSteps_jaime.WhenTypeOnDisplayNoticeField(wordOf110);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenSavedButtonExists();

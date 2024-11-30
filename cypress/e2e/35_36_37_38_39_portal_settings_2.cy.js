@@ -16,35 +16,35 @@ describe("Portal Settings 2 Tests", () => {
         givenSteps_jaime.givenNavigateToPortalModal();
     });
 
-    it("Should test portal settings 2 - sentence of less than 115 characters (positive)", () => {
+    it("35.) Should test portal settings 2 - sentence of less than 115 characters (positive)", () => {
         whenSteps_jaime.WhenClickLookAndFeelTab();
         whenSteps_jaime.WhenTypeOnSignUpButtonText(sentenceLessThan115);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenSavedButtonExists();
     });
 
-    it("Should test portal settings 2 - sentence of more than 115 characters (negative)", () => {
+    it("36.) Should test portal settings 2 - sentence of more than 115 characters (negative)", () => {
         whenSteps_jaime.WhenClickLookAndFeelTab();
         whenSteps_jaime.WhenTypeOnSignUpButtonText(sentenceMoreThan115);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenSavedButtonExists();
     });
 
-    it("Should test portal settings 2 - word of more than 115 characters (negative)", () => {
+    it("37.) Should test portal settings 2 - word of more than 115 characters (negative)", () => {
         whenSteps_jaime.WhenClickLookAndFeelTab();
         whenSteps_jaime.WhenTypeOnSignUpButtonText(wordMoreThan115);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenSavedButtonExists();
     });
 
-    it("Should test portal settings 2 - more than 110 characters (positive)", () => {
+    it("38.) Should test portal settings 2 - more than 110 characters (positive)", () => {
         whenSteps_jaime.WhenClickLookAndFeelTab();
         whenSteps_jaime.WhenTypeOnSignUpButtonText(wordOf110);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenSavedButtonExists();
     });
 
-    it("Should test portal settings 2 - Empty field (positive)", () => {
+    it("39.) Should test portal settings 2 - Empty field (positive)", () => {
         whenSteps_jaime.WhenClickLookAndFeelTab();
         whenSteps_jaime.WhenTypeOnSignUpButtonText(' ');
         whenSteps_jaime.WhenClickSaveButton();

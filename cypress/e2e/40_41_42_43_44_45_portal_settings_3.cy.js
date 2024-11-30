@@ -17,42 +17,42 @@ describe("Portal Settings 3 Tests", () => {
         givenSteps_jaime.givenNavigateToPortalModal();
     });
 
-    it("Should test portal settings 3 - sentence of less than 115 characters (negative)", () => {
+    it("40.) Should test portal settings 3 - sentence of less than 115 characters (negative)", () => {
         whenSteps_jaime.WhenClickAccountPageTab();
         whenSteps_jaime.WhenTypeOnSignUpButtonText(sentenceLessThan115);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenInvalidEmailAddressExists();
     });
 
-    it("Should test portal settings 3 - sentence of more than 115 characters (negative)", () => {
+    it("41.) Should test portal settings 3 - sentence of more than 115 characters (negative)", () => {
         whenSteps_jaime.WhenClickAccountPageTab();
         whenSteps_jaime.WhenTypeOnSignUpButtonText(sentenceMoreThan115);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenInvalidEmailAddressExists();
     });
 
-    it("Should test portal settings 3 - word of more than 115 characters (negative)", () => {
+    it("42.) Should test portal settings 3 - word of more than 115 characters (negative)", () => {
         whenSteps_jaime.WhenClickAccountPageTab();
         whenSteps_jaime.WhenTypeOnSignUpButtonText(wordMoreThan115);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenInvalidEmailAddressExists();
     });
 
-    it("Should test portal settings 3 - more than 110 characters (negative)", () => {
+    it("43.) Should test portal settings 3 - more than 110 characters (negative)", () => {
         whenSteps_jaime.WhenClickAccountPageTab();
         whenSteps_jaime.WhenTypeOnSignUpButtonText(wordOf110);
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenInvalidEmailAddressExists();
     });
 
-    it("Should test portal settings 3 - Empty field (negative)", () => {
+    it("44.) Should test portal settings 3 - Empty field (negative)", () => {
         whenSteps_jaime.WhenClickAccountPageTab();
         whenSteps_jaime.WhenTypeOnSignUpButtonText(' ');
         whenSteps_jaime.WhenClickSaveButton();
         thenSteps_jaime.ThenInvalidEmailAddressExists();
     });
 
-    it("Should test portal settings 3 -  (positive)", () => {
+    it("45.) Should test portal settings 3 -  (positive)", () => {
         whenSteps_jaime.WhenClickAccountPageTab();
         whenSteps_jaime.WhenTypeOnSignUpButtonText(email);
         whenSteps_jaime.WhenClickSaveButton();

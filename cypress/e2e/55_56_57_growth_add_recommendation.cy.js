@@ -17,20 +17,20 @@ describe("Growth Add Tests", () => {
         givenSteps_jaime.givenNavigateToGrowthAddRecommendationModal();
     });
 
-    it("Should test URL on Growth Recommendation - URL (positive)", () => {
+    it("55.) Should test URL on Growth Recommendation - URL (positive)", () => {
         whenSteps_jaime.WhenTypeOnGeneralTextField(site);
         whenSteps_jaime.WhenClickOnAddGrowthRecommendationNextButton();
         cy.wait(10000);
         thenSteps_jaime.ThenPreviewTitleExists();
     });
 
-    it("Should test URL on Growth Recommendation - sentence of less than 115 characters (negative)", () => {
+    it("56.) Should test URL on Growth Recommendation - sentence of less than 115 characters (negative)", () => {
         whenSteps_jaime.WhenTypeOnGeneralTextField(sentenceLessThan115);
         whenSteps_jaime.WhenClickOnAddGrowthRecommendationNextButton();
         thenSteps_jaime.ThenCheckIfErrorOnUrlExists();
     });
 
-    it("Should test URL on Growth Recommendation - Empty Space", () => {
+    it("57.) Should test URL on Growth Recommendation - Empty Space", () => {
         whenSteps_jaime.WhenTypeOnGeneralTextField(' ');
         whenSteps_jaime.WhenClickOnAddGrowthRecommendationNextButton();
         thenSteps_jaime.ThenCheckIfErrorOnUrlExists();
